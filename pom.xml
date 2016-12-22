@@ -761,6 +761,32 @@
 					<artifactId>gs-script-py</artifactId>
 					<version>${geoserver.version}</version>
 				</dependency>
+				<!-- pin Postgresql version to avoid PG 8.4 and PG 9.4 -->
+				<dependency>
+					<groupId>postgresql</groupId>
+					<artifactId>postgresql</artifactId>
+					<version>8.4-702.jdbc3</version>
+					<scope>provided</scope>
+				</dependency>
+				<!-- duplicate versions of bcprov -->
+				<dependency>
+					<groupId>bouncycastle</groupId>
+					<artifactId>bcprov-jdk14</artifactId>
+					<version>138</version>
+					<scope>provided</scope>
+				</dependency>
+				<dependency>
+					<groupId>bouncycastle</groupId>
+					<artifactId>bcmail-jdk14</artifactId>
+					<version>138</version>
+					<scope>provided</scope>
+				</dependency>
+				<!-- use the same version of bcmail as bcprov -->
+				<dependency>
+					<groupId>org.bouncycastle</groupId>
+					<artifactId>bcmail-jdk14</artifactId>
+					<version>1.46</version>
+				</dependency>
 			</dependencies>
 		</profile>
 	</profiles>
