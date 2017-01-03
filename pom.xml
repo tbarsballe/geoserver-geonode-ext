@@ -800,6 +800,18 @@
 					<artifactId>bcmail-jdk14</artifactId>
 					<version>1.46</version>
 				</dependency>
+        <!-- Push httpcore to 4.4.5 for geonode and OAuth -->
+				<dependency>
+					<groupId>org.apache.httpcomponents</groupId>
+					<artifactId>httpcore</artifactId>
+					<version>4.2.5</version>
+					<scope>provided</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.httpcomponents</groupId>
+					<artifactId>httpcore</artifactId>
+					<version>4.4.5</version>
+				</dependency>
 			</dependencies>
 		</profile>
 	</profiles>
