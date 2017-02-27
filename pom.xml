@@ -680,10 +680,10 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<geogig.version>1.0-RC4</geogig.version>
+				<geogig.version>1.1-SNAPSHOT</geogig.version>
 			</properties>
 			<dependencies>
-				<!-- Pin GeoGig version to 1.0-RC4 -->
+				<!-- Pin GeoGig version to 1.1-SNAPSHOT -->
 				<dependency>
 					<groupId>org.locationtech.geogig</groupId>
 					<artifactId>geogig-cli</artifactId>
