@@ -752,6 +752,11 @@
 						<version>3.6.1</version>
 				</dependency>
 				<dependency>
+						<groupId>org.geoserver.extension</groupId>
+						<artifactId>gs-gdal</artifactId>
+						<version>${geoserver.version}</version>
+				</dependency>
+				<dependency>
 					<groupId>org.geoserver.script</groupId>
 					<artifactId>gs-script-py</artifactId>
 					<version>${geoserver.version}</version>
