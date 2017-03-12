@@ -208,14 +208,6 @@
 			<version>17.0</version>
 		</dependency>
 
-		<!-- GeoJSON module dependencies -->
-		<dependency>
-			<groupId>net.sf.json-lib</groupId>
-			<artifactId>json-lib</artifactId>
-			<version>2.2.3</version>
-			<classifier>jdk15</classifier>
-		</dependency>
-
 		<!-- This dependency is temporary in order to hold a fake process while
 			developing the REST process wrapper -->
 		<dependency>
@@ -312,6 +304,7 @@
 			</exclusions>
 		</dependency>
 
+    <!-- Do we really need hibernate?
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -327,16 +320,17 @@
 			<artifactId>hibernate-spatial</artifactId>
 			<version>${hibernate-spatial-version}</version>
 		</dependency>
-		<!-- dependency>
+		< dependency>
 			<groupId>org.hibernatespatial</groupId>
 			<artifactId>hibernate-spatial-postgis</artifactId>
 			<version>${hibernate-spatial-version}</version>
-		</dependency -->
+		</dependency
 		<dependency>
 			<groupId>org.hibernatespatial</groupId>
 			<artifactId>hibernate-spatial-h2-geodb</artifactId>
 			<version>${hibernate-spatial-h2-version}</version>
 		</dependency>
+    -->
 
 		<dependency>
 			<groupId>cglib</groupId>
@@ -448,6 +442,7 @@
 		<!-- dependency> <groupId>org.easymock</groupId> <artifactId>easymockclassextension</artifactId>
 			<version>2.5.2</version> <scope>test</scope> </dependency -->
 
+<!-- Below shouldn’t be needed -->
 		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
@@ -589,6 +584,7 @@
 			<artifactId>spring-security-ldap</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
+    <!-- above shouldn’t be needed -->
 
 		<!-- Jetty runner dependencies -->
 		<dependency>
@@ -711,7 +707,7 @@
 				<dependency>
 					<groupId>org.apache.httpcomponents</groupId>
 					<artifactId>httpcore</artifactId>
-					<version>4.2.5</version>
+					<version>4.4.6</version>
 				</dependency>
 				<dependency>
 					<groupId>org.apache.directory.server</groupId>
@@ -759,6 +755,28 @@
 					<groupId>org.geoserver.script</groupId>
 					<artifactId>gs-script-py</artifactId>
 					<version>${geoserver.version}</version>
+          <exclusions>
+            <exclusion>
+              <groupId>org.geotools.jdbc</groupId>
+              <artifactId>gt-jdbc-mysql</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.geotools.jdbc</groupId>
+              <artifactId>gt-jdbc-teradata</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.geotools</groupId>
+              <artifactId>gt-charts</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.geotools</groupId>
+              <artifactId>gt-swing</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.geotools</groupId>
+              <artifactId>gt-imageio-ext-gdal</artifactId>
+            </exclusion>
+          </exclusions>
 				</dependency>
 				<!-- pin Postgresql version to avoid PG 8.4 and PG 9.4 -->
 				<dependency>
@@ -794,23 +812,13 @@
 					<scope>provided</scope>
 				</dependency>
 				<!-- use the same version of bcmail as bcprov -->
+        <!--
 				<dependency>
 					<groupId>org.bouncycastle</groupId>
 					<artifactId>bcmail-jdk14</artifactId>
 					<version>1.46</version>
 				</dependency>
-        <!-- Push httpcore to 4.4.5 for geonode and OAuth -->
-				<dependency>
-					<groupId>org.apache.httpcomponents</groupId>
-					<artifactId>httpcore</artifactId>
-					<version>4.2.5</version>
-					<scope>provided</scope>
-				</dependency>
-				<dependency>
-					<groupId>org.apache.httpcomponents</groupId>
-					<artifactId>httpcore</artifactId>
-					<version>4.4.5</version>
-				</dependency>
+        -->
 			</dependencies>
 		</profile>
 	</profiles>
