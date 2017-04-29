@@ -23,15 +23,14 @@
          FILE
          - outputs to the local filesystem first, before sending it off to the user
       -->
-    <param-value>FILE</param-value>
+    <param-value>PARTIAL-BUFFER2</param-value>
   </context-param>
-  
-  <!-- If true, enable versioning datastore as well -->
+
   <context-param>
     <param-name>enableVersioning</param-name>
     <param-value>true</param-value>
   </context-param>
-  
+
   <context-param>
     <!-- see comments on the PARTIAL-BUFFER strategy -->
     <!-- this sets the size of the buffer.  default is "50" = 50kb -->
@@ -90,6 +89,11 @@
     <filter>
     <filter-name>filterChainProxy</filter-name>     
      <filter-class> org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+
+    <filter>
+      <filter-name>xFrameOptionsFilter</filter-name>
+      <filter-class>org.geoserver.filters.XFrameOptionsFilter</filter-class>
     </filter>
 
    <filter>
@@ -159,6 +163,11 @@
      reasons 
      -->
    </filter>
+   <!-- Uncomment following filter to enable CORS -->
+   <!-- <filter>
+        <filter-name>cross-origin</filter-name>
+        <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
+    </filter> -->
 
     <!-- 
       THIS FILTER MUST BE THE FIRST ONE, otherwise we end up with ruined chars in the input from the GUI
@@ -169,6 +178,12 @@
       <filter-name>Set Character Encoding</filter-name>
       <url-pattern>/*</url-pattern>
     </filter-mapping>
+   
+   <!-- Uncomment following filter to enable CORS -->
+    <!-- <filter-mapping>
+        <filter-name>cross-origin</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping> -->
    
     <filter-mapping>
       <filter-name>FlushSafeFilter</filter-name>
@@ -182,6 +197,11 @@
 
     <filter-mapping>
       <filter-name>GZIP Compression Filter</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+      <filter-name>xFrameOptionsFilter</filter-name>
       <url-pattern>/*</url-pattern>
     </filter-mapping>
     

@@ -1,12 +1,10 @@
 <wms>
   <id>wms</id>
   <enabled>true</enabled>
-  <name>My GeoServer WMS</name>
-  <title>My GeoServer WMS</title>
-  <maintainer>http://jira.codehaus.org/secure/BrowseProject.jspa?id=10311</maintainer>
-  <abstrct>
-This is a description of your Web Map Server.
-     </abstrct>
+  <name>WMS</name>
+  <title>GeoServer Web Map Service</title>
+  <maintainer>http://geoserver.org/comm</maintainer>
+  <abstrct>A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS</abstrct>
   <accessConstraints>NONE</accessConstraints>
   <fees>NONE</fees>
   <versions>
@@ -24,7 +22,7 @@ This is a description of your Web Map Server.
   </keywords>
   <metadataLink/>
   <citeCompliant>false</citeCompliant>
-  <onlineResource>http://geoserver.sourceforge.net/html/index.php</onlineResource>
+  <onlineResource>http://geoserver.org</onlineResource>
   <schemaBaseURL>http://schemas.opengis.net</schemaBaseURL>
   <verbose>false</verbose>
   <metadata>

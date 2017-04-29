@@ -8,14 +8,6 @@
     <proxyBaseUrl>http://localhost:8080/geoserver</proxyBaseUrl>
     <verbose>false</verbose>
     <verboseExceptions>false</verboseExceptions>
-    <metadata>
-      <map>
-        <entry>
-          <string>quietOnNotFound</string>
-          <boolean>false</boolean>
-        </entry>
-      </map>
-    </metadata>
     <localWorkspaceIncludesPrefix>false</localWorkspaceIncludesPrefix>
   </settings>
   <jai>
