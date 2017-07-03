@@ -683,7 +683,7 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<geogig.version>1.1.1-RC1</geogig.version>
+				<geogig.version>1.1.1-RC2</geogig.version>
 			</properties>
 			<dependencies>
 				<!-- Pin GeoGig version to 1.1-SNAPSHOT -->
@@ -822,6 +822,18 @@
 					<version>1.3.3</version>
 					<scope>provided</scope>
 				</dependency>
+				<!-- Use newer version of H2 to solve issues with geofence -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.1.119</version>
+            <scope>provided</scope>
+        </dependency>
+          <dependency>
+              <groupId>com.h2database</groupId>
+              <artifactId>h2</artifactId>
+              <version>1.4.196</version>
+          </dependency>
 				<!-- duplicate versions of bcprov -->
 				<dependency>
 					<groupId>bouncycastle</groupId>
