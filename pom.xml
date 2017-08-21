@@ -364,21 +364,6 @@
 		</dependency>
 
 		<dependency>
-			<!-- required by gs-geogig but declares it as provided to avoid gt version
-				clashes -->
-			<groupId>org.geotools.jdbc</groupId>
-			<artifactId>gt-jdbc-spatialite</artifactId>
-			<version>${geotools.version}</version>
-		</dependency>
-		<dependency>
-			<!-- required by gs-geogig but declares it as provided to avoid gt version
-				clashes -->
-			<groupId>org.geotools</groupId>
-			<artifactId>gt-geopkg</artifactId>
-			<version>${geotools.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.geotools</groupId>
 			<artifactId>gt-shapefile</artifactId>
 			<version>${geotools.version}</version>
@@ -764,6 +749,11 @@
 						<artifactId>gs-gdal</artifactId>
 						<version>${geoserver.version}</version>
 				</dependency>
+        <dependency>
+          <groupId>org.geoserver.community</groupId>
+          <artifactId>gs-geopkg</artifactId>
+          <version>${geoserver.version}</version>
+        </dependency>
 				<dependency>
 					<groupId>org.geoserver.script</groupId>
 					<artifactId>gs-script-py</artifactId>
@@ -807,7 +797,7 @@
 				<dependency>
 					<groupId>org.postgresql</groupId>
 					<artifactId>postgresql</artifactId>
-					<version>42.1.1</version>
+					<version>42.1.4</version>
 				</dependency>
 				<!-- Remove Geofence transitive dependencies  -->
 				<dependency>
