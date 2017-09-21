@@ -758,6 +758,16 @@
           <artifactId>gs-mbstyle</artifactId>
           <version>${geoserver.version}</version>
         </dependency>
+        <dependency>
+          <groupId>org.geoserver.community</groupId>
+          <artifactId>gs-mbtiles</artifactId>
+          <version>${geoserver.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.geoserver.extension</groupId>
+          <artifactId>gs-excel</artifactId>
+          <version>${geoserver.version}</version>
+        </dependency>
 				<dependency>
 					<groupId>org.geoserver.script</groupId>
 					<artifactId>gs-script-py</artifactId>
