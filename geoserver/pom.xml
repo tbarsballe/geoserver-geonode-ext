@@ -5,7 +5,7 @@
 	<groupId>org.opengeo</groupId>
 	<artifactId>geonode-geoserver-ext</artifactId>
 	<packaging>pom</packaging>
-	<version>2.12-SNAPSHOT</version>
+	<version>2.12.0</version>
 	<name>GeoNode GeoServer Extensions</name>
 
 	<repositories>
@@ -46,6 +46,12 @@
 			<id>org.mapfish</id>
 			<url>http://dev.mapfish.org/maven/repository</url>
 		</repository -->
+
+    <repository>
+      <id>boundlessps</id>
+      <name>boundlessps test repo</name>
+      <url>https://s3.amazonaws.com/boundlessps-public/main/</url>
+    </repository>
 	</repositories>
 
     <distributionManagement>
@@ -75,11 +81,16 @@
  
 	<dependencyManagement>
 		<dependencies>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>42.1.4</version>
+            </dependency>
 			<!-- geoserver-geonode-ext extensions -->
 			<dependency>
 				<groupId>org.opengeo</groupId>
 				<artifactId>geonode-geoserver-ext-wps-batchdownload</artifactId>
-				<version>${gs.version}</version>
+				<version>2.12-SNAPSHOT</version>
 			</dependency>
 			<!-- importing geoserver dependencies management -->
 			<dependency>
@@ -121,6 +132,7 @@
 				<artifactId>gs-web-wms</artifactId>
 				<version>${gs.version}</version>
 			</dependency>
+      <!--
 			<dependency>
 				<groupId>org.geoserver.community</groupId>
 				<artifactId>gs-jms-geoserver</artifactId>
@@ -132,6 +144,8 @@
 				<classifier>tests</classifier>
 				<version>${gs.community.version}</version>
 			</dependency>
+      -->
+      
 			<dependency>
 				<groupId>org.geoserver.community.backuprestore</groupId>
 				<artifactId>gs-backup-restore-core</artifactId>
@@ -160,10 +174,11 @@
 			<dependency>
                 <groupId>org.opengeo</groupId>
                 <artifactId>geonode-geoserver-ext-sldservice</artifactId>
-				<version>${project.version}</version>
+				<version>2.12-SNAPSHOT</version>
 			</dependency>
 
 			<!-- hibernate dependencies -->
+      <!--
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-core</artifactId>
@@ -174,7 +189,9 @@
 				<artifactId>hibernate-annotations</artifactId>
 				<version>${hibernate-annotations-version}</version>
 			</dependency>
+      -->
 			<!-- other dependencies -->
+      
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>javax.servlet-api</artifactId>
@@ -185,11 +202,13 @@
 				<artifactId>c3p0</artifactId>
 				<version>${c3p0.version}</version>
 			</dependency>
+      <!--
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-orm</artifactId>
 				<version>${spring.orm.version}</version>
 			</dependency>
+      -->
 			<dependency>
 				<groupId>com.google.code.gson</groupId>
 				<artifactId>gson</artifactId>
@@ -206,6 +225,7 @@
 				<artifactId>gs-monitor-core</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+      <!--
 			<dependency>
 				<groupId>org.geoserver.extension</groupId>
 				<artifactId>gs-monitor-hibernate</artifactId>
@@ -221,6 +241,7 @@
 				<artifactId>gs-inspire</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+      -->
 			<dependency>
 				<groupId>org.geoserver.extension</groupId>
 				<artifactId>gs-control-flow</artifactId>
@@ -258,7 +279,50 @@
                 <artifactId>gs-gdal</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+        <dependency>
+          <groupId>org.geoserver.community</groupId>
+          <artifactId>gs-geopkg</artifactId>
+          <version>${project.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.geoserver.community</groupId>
+          <artifactId>gs-mbstyle</artifactId>
+          <version>${project.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.geoserver.community</groupId>
+          <artifactId>gs-mbtiles</artifactId>
+          <version>${project.version}</version>
+        </dependency>
+				<dependency>
+					<groupId>org.geoserver.script</groupId>
+					<artifactId>gs-script-py</artifactId>
+					<version>2.12-SNAPSHOT</version>
+          <exclusions>
+            <exclusion>
+              <groupId>org.geotools.jdbc</groupId>
+              <artifactId>gt-jdbc-mysql</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.geotools.jdbc</groupId>
+              <artifactId>gt-jdbc-teradata</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.geotools</groupId>
+              <artifactId>gt-charts</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.geotools</groupId>
+              <artifactId>gt-swing</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.geotools</groupId>
+              <artifactId>gt-imageio-ext-gdal</artifactId>
+            </exclusion>
+          </exclusions>
+				</dependency>
 
+      <!--
 			<dependency>
 				<groupId>org.geoserver.importer</groupId>
 				<artifactId>gs-importer-core</artifactId>
@@ -276,7 +340,7 @@
 				<artifactId>gs-importer-rest</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-
+      -->
 			<dependency>
 				<groupId>org.geoserver.extension</groupId>
 				<artifactId>gs-wps-core</artifactId>
@@ -319,6 +383,7 @@
 			</dependency>
 
 			<!-- Notification Extension -->
+      <!--
 			<dependency>
 				<groupId>org.geoserver.community</groupId>
 				<artifactId>gs-notification</artifactId>
@@ -340,6 +405,7 @@
 				<artifactId>spring-security-oauth2</artifactId>
 				<version>${spring-security-oauth2.version}</version>
 			</dependency>
+      -->
 
 			<!-- AuthKey and REST Role Service Security Extension -->
 			<dependency>
@@ -391,12 +457,17 @@
             </dependency>
 
 			<!-- Updated geogit to geogig -->
-			<dependency>
-				<groupId>org.geoserver.community</groupId>
-				<artifactId>gs-geogig</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-            
+		<dependency>
+			<groupId>org.geoserver.community</groupId>
+			<artifactId>gs-geogig</artifactId>
+			<version>2.12-SNAPSHOT</version>
+		</dependency>
+				<!-- Use newer version of H2 to solve issues with geofence -->
+          <dependency>
+              <groupId>com.h2database</groupId>
+              <artifactId>h2</artifactId>
+              <version>1.4.196</version>
+          </dependency>
             <!-- Other GeoServer Extensions -->
             <dependency>
                 <groupId>org.geoserver.community</groupId>
@@ -422,13 +493,13 @@
         <jetty.version>9.2.13.v20150730</jetty.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<geoserver.data.dir>geonode_v212x</geoserver.data.dir>
-        <gt.version>18-SNAPSHOT</gt.version>
-		<gs.version>2.12-SNAPSHOT</gs.version>
-		<gs.community.version>2.12-SNAPSHOT</gs.community.version>
+		<geoserver.data.dir>exchange</geoserver.data.dir>
+        <gt.version>18.0</gt.version>
+		<gs.version>2.12.0</gs.version>
+		<gs.community.version>2.12.0</gs.community.version>
         <gf.version>3.2-SNAPSHOT</gf.version>
 		<jetty.servlet.api.version>3.1.0</jetty.servlet.api.version>
-
+<!--
         <hibernate-version>3.6.0.Final</hibernate-version>
         <hibernate-annotations-version>3.3.1.GA</hibernate-annotations-version>
 		<hibernate-generic-dao-version>1.1.0</hibernate-generic-dao-version>
@@ -436,8 +507,11 @@
 		<hibernate-spatial-h2-version>1.1.1</hibernate-spatial-h2-version>
 
 		<spring-security-oauth2.version>2.0.11.RELEASE</spring-security-oauth2.version>
+    -->
 		<c3p0.version>0.9.0.4</c3p0.version>
+    <!--
 		<spring.orm.version>3.1.1.RELEASE</spring.orm.version>
+    -->
 		<gson.version>2.3.1</gson.version>
 		<http.client.version>4.5.3</http.client.version>
 	</properties>
