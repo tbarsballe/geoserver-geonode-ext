@@ -1,16 +1,10 @@
 <wfs>
   <id>wfs</id>
   <enabled>true</enabled>
-  <name>My GeoServer WFS</name>
-  <title>My GeoServer WFS</title>
-  <maintainer>http://jira.codehaus.org/secure/BrowseProject.jspa?id=10311</maintainer>
-  <abstrct>
-This is a description of your Web Feature Server.
-
-The GeoServer is a full transactional Web Feature Server, you may wish to limit
-GeoServer to a Basic service level to prevent modificaiton of your geographic
-data.
-     </abstrct>
+  <name>WFS</name>
+  <title>GeoServer Web Feature Service</title>
+  <maintainer>http://geoserver.org/comm</maintainer>
+  <abstrct>This is the reference implementation of WFS 1.0.0 and WFS 1.1.0, supports all WFS operations including Transaction.</abstrct>
   <accessConstraints>NONE</accessConstraints>
   <fees>NONE</fees>
   <versions>
@@ -31,17 +25,10 @@ data.
   </keywords>
   <metadataLink/>
   <citeCompliant>false</citeCompliant>
-  <onlineResource>http://geoserver.sourceforge.net/html/index.php</onlineResource>
+  <onlineResource>http://geoserver.org</onlineResource>
   <schemaBaseURL>http://schemas.opengis.net</schemaBaseURL>
   <verbose>false</verbose>
   <gml>
-    <entry>
-      <version>V_20</version>
-      <gml>
-        <srsNameStyle>URN2</srsNameStyle>
-        <overrideGMLAttributes>false</overrideGMLAttributes>
-      </gml>
-    </entry>
     <entry>
       <version>V_10</version>
       <gml>
@@ -53,6 +40,13 @@ data.
       <version>V_11</version>
       <gml>
         <srsNameStyle>URN</srsNameStyle>
+        <overrideGMLAttributes>false</overrideGMLAttributes>
+      </gml>
+    </entry>
+    <entry>
+      <version>V_20</version>
+      <gml>
+        <srsNameStyle>URN2</srsNameStyle>
         <overrideGMLAttributes>false</overrideGMLAttributes>
       </gml>
     </entry>

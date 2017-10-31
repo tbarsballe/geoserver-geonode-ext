@@ -1,10 +1,11 @@
 <wcs>
   <id>wcs</id>
   <enabled>true</enabled>
-  <name>My GeoServer WCS</name>
-  <title>My GeoServer WCS</title>
-  <maintainer>http://jira.codehaus.org/secure/BrowseProject.jspa?id=10311</maintainer>
-  <abstrct>This is a description of your Web Coverage Server.</abstrct>
+  <name>WCS</name>
+  <title>Web Coverage Service</title>
+  <maintainer>http://geoserver.org/comm</maintainer>
+  <abstrct>This server implements the WCS specification 1.0 and 1.1.1, it&apos;s reference implementation of WCS 1.1.1. All layers published by this service are available on WMS also.
+     </abstrct>
   <accessConstraints>NONE</accessConstraints>
   <fees>NONE</fees>
   <versions>
@@ -29,12 +30,11 @@
     <metadataType>other</metadataType>
   </metadataLink>
   <citeCompliant>false</citeCompliant>
-  <onlineResource>http://geoserver.sourceforge.net/html/index.php</onlineResource>
+  <onlineResource>http://geoserver.org</onlineResource>
   <schemaBaseURL>http://schemas.opengis.net</schemaBaseURL>
   <verbose>false</verbose>
   <gmlPrefixing>false</gmlPrefixing>
   <latLon>false</latLon>
-  <maxInputMemory>600000</maxInputMemory>
-  <maxOutputMemory>600000</maxOutputMemory>
-  <overviewPolicy>NEAREST</overviewPolicy>
+  <maxInputMemory>0</maxInputMemory>
+  <maxOutputMemory>0</maxOutputMemory>
 </wcs>

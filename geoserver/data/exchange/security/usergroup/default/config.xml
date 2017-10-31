@@ -5,6 +5,6 @@
   <fileName>users.xml</fileName>
   <checkInterval>10000</checkInterval>
   <validating>true</validating>
-  <passwordEncoderName>pbePasswordEncoder</passwordEncoderName>
+  <passwordEncoderName>digestPasswordEncoder</passwordEncoderName>
   <passwordPolicyName>default</passwordPolicyName>
 </userGroupService>

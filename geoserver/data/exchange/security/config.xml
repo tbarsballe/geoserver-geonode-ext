@@ -2,8 +2,8 @@
   <!-- roleServiceName>geonode REST role service</roleServiceName -->
   <roleServiceName>default</roleServiceName>
   <authProviderNames>
-    <string>default</string>
     <string>geofence</string>
+    <string>default</string>
   </authProviderNames>
   <configPasswordEncrypterName>pbePasswordEncoder</configPasswordEncrypterName>
   <encryptingUrlParams>false</encryptingUrlParams>

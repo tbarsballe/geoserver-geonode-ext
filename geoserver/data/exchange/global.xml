@@ -20,14 +20,14 @@
   </settings>
   <jai>
     <allowInterpolation>false</allowInterpolation>
-    <recycling>true</recycling>
+    <recycling>false</recycling>
     <tilePriority>5</tilePriority>
     <tileThreads>7</tileThreads>
     <memoryCapacity>0.5</memoryCapacity>
     <memoryThreshold>0.75</memoryThreshold>
     <imageIOCache>false</imageIOCache>
-    <pngAcceleration>false</pngAcceleration>
-    <jpegAcceleration>false</jpegAcceleration>
+    <pngAcceleration>true</pngAcceleration>
+    <jpegAcceleration>true</jpegAcceleration>
     <allowNativeMosaic>false</allowNativeMosaic>
     <allowNativeWarp>false</allowNativeWarp>
   </jai>
@@ -38,10 +38,11 @@
     <queueType>UNBOUNDED</queueType>
     <imageIOCacheThreshold>10240</imageIOCacheThreshold>
   </coverageAccess>
-  <charset>UTF-8</charset>
-  <numDecimals>8</numDecimals>
-  <onlineResource>http://geoserver.org</onlineResource>
-  <verbose>false</verbose>
-  <verboseExceptions>false</verboseExceptions>
   <updateSequence>0</updateSequence>
+  <featureTypeCacheSize>0</featureTypeCacheSize>
+  <globalServices>true</globalServices>
+  <xmlPostRequestLogBufferSize>1024</xmlPostRequestLogBufferSize>
+  <xmlExternalEntitiesEnabled>false</xmlExternalEntitiesEnabled>
+  <webUIMode>DO_NOT_REDIRECT</webUIMode>
+  <resourceErrorHandling>SKIP_MISCONFIGURED_LAYERS</resourceErrorHandling>
 </global>
