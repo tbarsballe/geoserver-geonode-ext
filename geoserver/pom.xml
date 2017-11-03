@@ -294,6 +294,11 @@
           <artifactId>gs-mbtiles</artifactId>
           <version>${project.version}</version>
         </dependency>
+        <dependency>
+          <groupId>org.geoserver.extension</groupId>
+          <artifactId>gs-vectortiles</artifactId>
+          <version>${project.version}</version>
+        </dependency>
 				<dependency>
 					<groupId>org.geoserver.script</groupId>
 					<artifactId>gs-script-py</artifactId>

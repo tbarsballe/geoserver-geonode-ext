@@ -144,6 +144,10 @@
           <artifactId>gs-mbtiles</artifactId>
         </dependency>
         <dependency>
+          <groupId>org.geoserver.extension</groupId>
+          <artifactId>gs-vectortiles</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcmail-jdk15on</artifactId>
         </dependency>
