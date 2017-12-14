@@ -53,10 +53,10 @@ def run(features, attributeName):
         stats['totalCount'] += 1
         val = f.attributes[attributeName]
 
-        if str(val) in stats['uniqueValues']:
-            stats['uniqueValues'][str(val)] += 1
+        if val in stats['uniqueValues']:
+            stats['uniqueValues'][val] += 1
         else:
-            stats['uniqueValues'][str(val)] = 1
+            stats['uniqueValues'][val] = 1
 
         if val is not None and val != '':
             stats['populatedCount'] += 1
