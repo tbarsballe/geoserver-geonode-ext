@@ -80,7 +80,7 @@
 		<!-- <groupId>org.geoserver.community</groupId> -->
 		<!-- <artifactId>gs-jms-geoserver</artifactId> -->
 		<!-- </dependency> -->
-    <!-- Commenting out backup and restore. Community build of 2.12.1 only has test classes
+
 		<dependency>
 			<groupId>org.geoserver.community.backuprestore</groupId>
 			<artifactId>gs-backup-restore-extension</artifactId>
@@ -93,7 +93,7 @@
 			<groupId>org.geoserver.community.backuprestore</groupId>
 			<artifactId>gs-backup-restore-web</artifactId>
 		</dependency>
-    -->
+
 		<!-- <dependency> -->
 		<!-- <groupId>org.geoserver.community</groupId> -->
 		<!-- <artifactId>gs-sldservice</artifactId> -->
