@@ -302,7 +302,7 @@
 				<dependency>
 					<groupId>org.geoserver.script</groupId>
 					<artifactId>gs-script-py</artifactId>
-          <version>${project.version}</version>
+          <version>2.14-SNAPSHOT</version>
           <exclusions>
             <exclusion>
               <groupId>org.geotools.jdbc</groupId>
